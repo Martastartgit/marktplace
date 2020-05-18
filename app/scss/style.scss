@@ -1,13 +1,249 @@
-html{
-    box-sizing: border-box;
+@import '_vars';
+@import '_global';
+
+
+.header__top {
+    background-color: $hd-bg;
 }
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    
 }
-body{
-    padding: 0;
-    margin: 0px;
-    background-color: pink;
-}  
+
+.header__text {
+    background-color: $blue;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: 50px;
+    a {
+        color: #fff;
+        font-size: 14px;
+        line-height: 2;
+        text-align: center;
+    }
+}
+
+.header__btn {
+    width: 72px;
+    padding: 5px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.header__btn-login {
+    background-color: $violet;
+}
+
+.header__btn-register {
+    background-color: $red;
+    margin-left: 7px;
+}
+
+.header__menu-inner {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.menu__list {
+    li {
+        display: inline-block;
+    }
+    li + li {
+        margin-left: 35px;
+    }
+    a {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: $hd-text;
+    }
+}
+
+.menu__form {
+    margin-left: auto;
+    max-width: 358px;
+    width: 100%;
+    position: relative;
+    
+    input {
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+        font-size: 15px;
+        padding-left: 25px;
+        padding-right: 75px; 
+        line-height: 35px;
+        border: 1px solid rgb(217, 223, 229);
+        outline: none;
+        &::placeholder {
+           color: #898f96; 
+        } 
+    }
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 39px;
+        width: 70px;
+        border-radius: 20px;
+        background-color: $blue;
+        border: none;
+    }
+}
+
+.search {
+    background-image: linear-gradient( 180deg, rgb(0,48,222) 0%, rgb(23,69,237) 54%, rgb(46,90,251) 100%);
+    background-color: rgb(43, 43, 43);
+    min-height: 725px;
+    width: 100%;
+    position: relative;
+    display: flex;
+   
+}
+.search__inner {
+    color: #fff;
+    padding: 175px 0 100px;
+    text-align: center;
+
+    &-title {
+        font-size: 60px;
+        margin-bottom: 35px;
+        span {
+            display: block;
+            font-weight: 700;
+        }
+    }
+    &-text {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 60px;
+    }
+    &-link {
+        font-size: 16px;
+        margin-bottom: 25px;
+        line-height: 53px;  
+    }
+   &-form{
+    
+       form {
+           flex: 0 1 1140px;
+           position: absolute;
+           bottom: -60px;
+           justify-content: center;
+           left: 22%;
+           align-items: flex-end;
+           min-height: 140px;
+           padding: 35px;
+           background-color: #fff;
+           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+           border-radius: 10px;
+           z-index: 3;
+       }
+       input {
+           font-size: 16px;
+           line-height: 49px;
+           padding: 0 25px;
+           width: 615px;
+           border: 1px solid rgb(217, 223, 229);
+           border-radius: 4px;
+           &::placeholder{
+               color: #676767;
+           }        
+       }
+       select {
+           position: relative;
+           font-size: 16px;
+           line-height: 49px;
+           color: #555;
+           padding-right: 55px;
+           padding-left: 25px;
+           margin-right: 25px;
+           width: 195px;
+           appearance: none;
+           border: 1px solid rgb(217, 223, 229);
+           border-radius: 5px;
+           &::after{
+               content: "";
+               position: absolute;
+               background-color: red;
+               background-image: url(../images/icons/chevron-down.png);
+               width: 250px;
+               height: 250px;
+               top: 0;
+               right: 0;
+               z-index: 4;
+
+           }
+       }
+       button {
+           padding: 0 60px;
+           background-color: $blue;
+           color: #fff;
+           border-radius: 5px;
+           line-height: 49px;
+           width: 225px;
+        
+       }
+   }
+}
+
+.search-link {
+    margin-left: 30px;
+    padding: 0 25px;
+    color: #fff; 
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 30px;
+    width: 199px;
+}
+
+.search-link--active,
+.search-link:hover{
+    background-color: #fff;
+    color: $blue;
+}
+
+.box-shadow{
+    position: absolute;
+    bottom: -60px;    
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0.5;   
+ 
+}
+.shadow-one {
+    flex: 0 1 1079px;
+    width: 1102px;
+    min-height: 153px;
+    left: 23%;
+    z-index: 2;
+    
+}
+.shadow-second {
+    flex: 0 1 1089px;
+    width: 1064px;
+    left: 24%;
+    min-height: 165px;
+    z-index: 1;
+}
+
+
+
+
+
