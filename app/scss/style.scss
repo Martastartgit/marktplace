@@ -191,6 +191,7 @@
            border-radius: 5px;
            line-height: 49px;
            width: 225px;
+           border: none;
         
        }
    }
@@ -240,6 +241,50 @@
     z-index: 1;
 }
 
+// end section search
+// start section advantages
+
+.advantages {
+    padding: 100px 110px;
+    .advantages__inner {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+.advantages__item {
+    max-width: 365px;
+    width: 100%;
+    margin: 50px 25px;
+    padding: 30px;
+    &:hover {
+        border-radius: 4px;
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    }
+    &-img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 113px;
+        max-width: 112px;
+        margin: 0 auto;
+    }
+    &-content{
+        text-align: center;
+        h1{
+            font-size: 24px;
+            padding:  5px;
+            margin:  10px 0;
+        }
+        p {
+            font-size: 16px;
+            color: $text;
+            line-height: 30px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+    }
+}
 
 
 
