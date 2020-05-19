@@ -103,6 +103,7 @@
     }
 }
 
+
 .search {
     background-image: linear-gradient( 180deg, rgb(0,48,222) 0%, rgb(23,69,237) 54%, rgb(46,90,251) 100%);
     background-color: rgb(43, 43, 43);
@@ -116,10 +117,9 @@
     color: #fff;
     padding: 175px 0 100px;
     text-align: center;
-
     &-title {
         font-size: 60px;
-        margin-bottom: 35px;
+        margin-bottom: 35px;     
         span {
             display: block;
             font-weight: 700;
@@ -129,6 +129,7 @@
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 60px;
+     
     }
     &-link {
         font-size: 16px;
@@ -138,11 +139,11 @@
    &-form{
     
        form {
-           flex: 0 1 1140px;
+           flex: 1 1 1140px;
            position: absolute;
            bottom: -60px;
-           justify-content: center;
            left: 22%;
+           justify-content: center;
            align-items: flex-end;
            min-height: 140px;
            padding: 35px;
@@ -253,7 +254,7 @@
 
 }
 .advantages__item {
-    max-width: 365px;
+    flex: 0 0 365px;
     width: 100%;
     margin: 50px 25px;
     padding: 30px;
@@ -272,15 +273,14 @@
     &-content{
         text-align: center;
         h1{
+            font-weight: 400;
             font-size: 24px;
-            padding:  5px;
             margin:  10px 0;
         }
         p {
             font-size: 16px;
             color: $text;
             line-height: 30px;
-            padding: 5px;
             margin: 10px 0;
         }
     }
